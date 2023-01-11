@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { Fragment, useState } from 'react';
+import { PokemonCard } from './components/PokemonCard';
+import { useFetchPokemons } from './hooks/useFetchPokemons';
 
 function App() {
+  const [url, setUrl] = useState('https://pokeapi.co/api/v2/pokemon');
+  const dataPokemon = useFetchPokemons(url);
+  console.log(dataPokemon);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <h1>Hola mundo</h1>
+      <PokemonCard />
+    </Fragment>
   );
 }
 
