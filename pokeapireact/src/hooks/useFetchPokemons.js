@@ -21,7 +21,6 @@ export const useFetchPokemons = (url) => {
       fetch(url).then(response => response.json()).then(pokemons => {
         const nextUrl = pokemons.next;
         const previousUrl = pokemons.previous;
-        let aux = [];
 
         setState({
           data: pokemons.results,
