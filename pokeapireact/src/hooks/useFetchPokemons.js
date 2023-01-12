@@ -4,7 +4,6 @@ export const useFetchPokemons = (url) => {
     const [state, setState] = useState({
         data:[],
         loading: true,
-        error: null,
         nextUrl: null,
         previousUrl: null
     });
@@ -13,7 +12,6 @@ export const useFetchPokemons = (url) => {
       setState({
         data: [],
         loading: true,
-        error: null,
         nextUrl: null,
         previousUrl: null
       });
@@ -25,7 +23,6 @@ export const useFetchPokemons = (url) => {
         setState({
           data: pokemons.results,
           loading: false,
-          error: null,
           nextUrl: nextUrl,
           previousUrl: previousUrl
         });
