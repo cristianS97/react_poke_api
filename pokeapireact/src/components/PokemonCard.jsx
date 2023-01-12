@@ -17,8 +17,10 @@ export const PokemonCard = ({pokemon}) => {
   return <Fragment>
     {loading
       ?
-      <div className="spinner-border text-success" role="status">
-        <span className="visually-hidden">Loading...</span>
+      <div className="card mb-2" style={{width: 'calc(25% - 10px)'}}>
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
       </div>
       : 
       <div className="card mb-2" style={{width: 'calc(25% - 10px)'}}>
